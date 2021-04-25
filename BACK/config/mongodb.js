@@ -39,19 +39,20 @@ const usuariosShema = mongoose.Schema({
     unique: true
   },
   products:{
-    type: Object,
+    type: Array,
     require: false,
-    default:[]
   },
   employees:{
-    type: Object,
+    type: Array,
     require: false,
-    default:[]
   },
   note:{
-    type:Object,
+    type:Array,
     require:false,
-    default:[]
+  },
+  box:{
+    type:Array,
+    require:false,
   },
   admin:{
     type:Boolean,

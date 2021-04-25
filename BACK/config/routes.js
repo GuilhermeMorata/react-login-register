@@ -11,5 +11,7 @@ module.exports = app => {
     app.use('/login',auth);
 
     
-  
+  /*   //notes
+    app.post('/note',upnote ) */
+
 }

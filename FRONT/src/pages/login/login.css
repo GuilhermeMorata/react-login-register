@@ -1,8 +1,10 @@
 .mbody {
-  background-color: rgb(58, 58, 58);
+  /* background: linear-gradient(13deg,#1e1e2f,#49494e); */
+ background: linear-gradient(to top right,#fc2c77 0%,#6c4079 100%); 
+ /* background: linear-gradient(to top right, #18203f 0%,#7ebbf8 100%); */
   color: #fff;
   min-height: 50vw;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   display: flex;  
   flex-direction: column;
@@ -14,59 +16,40 @@
 }
 
 
-@media(max-width:1110px){
-  .mbody{
-    width: 100%;
-    min-height: 663px;
-    height: 100%;
-  }
-}
-
-legend{
-  margin: 0px;
-  padding: 15px;
-  font-size: 35px;
-  position: relative;
-  align-self: center;
-  align-content: center;
-  justify-self: center;
-  text-align: center;
-}
-
-label {
-  min-height: 0px;
-  font-size: 23px;
-}
-
 .mform {
   min-height: 0px;
-  width: 300px;
-  padding: 25px 0px 25px 25px ;
-  margin: 0 auto;
+  width: 350px;
+  height: 400px;
+  background-color: transparent;
+  padding: 25px;
+  margin: 20px;
+  padding: 40px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap:wrap;
   justify-items: center;
   border: #fff 5px solid;
   }
 .mcontrol{
   min-height: 0px;
+  display: flex;
   margin: 0 0 24px;
 }
 .mform input {
-  min-height: 0px;
-  min-width: 230px;
   padding: 14px 16px;
-  border: 0;
+  border:0px;
   background-color: whitesmoke;
   color: black;
   font-family: monospace,serif;
   letter-spacing: 0.05em;
   font-size: 16px;
+  border-radius: 0px 30px 30px 0px;
+  
   }
 .mform input:focus{
   min-height: 0px;
-  background-color: cornflowerblue;
+  background: linear-gradient(13deg,#8ba2ff,#082b4e);
+  border-radius: 0px 30px 30px 0px;
   color:black;
 }
 .conteinerbottoes{
@@ -76,12 +59,11 @@ label {
   flex-wrap: wrap;
   align-content: stretch;
   width: 100%;
-  margin-top: 10px;
-  padding-right: 40px;
 
 }
-.mbutton {
+.mbuttonenter {
     width: 100%;
+    border-radius: 50px;
     height: 50px;
     margin-top:15px;
     outline: none;
@@ -90,12 +72,35 @@ label {
     letter-spacing: 0.1em;
     font-weight: bold;
     font-family: monospace;
-    font-size: 16px;
+    background: linear-gradient(13deg,#b43e3e,#df4444);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+  }
+.mbutton {
+    width: 100%;
+    border-radius: 50px;
+    height: 50px;
+    margin-top:15px;
+    outline: none;
+    border: 0;
+    color: black;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    font-family: monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+
   }
 button:hover{
   background-color: cadetblue;
   color: black;
 }
+
+
 .link{
     min-height: 0px;
     width: 100%;
@@ -116,4 +121,25 @@ button:hover{
   text-decoration: none;
   background-color:slategrey;
   color: black;
+}
+.iconsst{
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  border: #fff solid 1px;
+  border-radius: 30px 0px 0px 30px;
+  padding:10px;
+}
+
+@media (max-width:900px) {
+    .mbody{
+      width: 100vw;
+      height: 100vh;
+    }
+    .mform{
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+      margin: 0px;
+    }
 }

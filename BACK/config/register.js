@@ -69,8 +69,13 @@ const registeruser = async (req, res) => {
         name: newuser.name,
         email: newuser.email,
         city: newuser.city,
-
+        products:[],
+        employees:[],
+        note:[],
+        box:[],
+    
     })
+
     saveuser.save()
         .then(()=>{return res.json({menssage:'sucesso'})})
         .catch((err) => {res.json({menssage:err})})

@@ -1,4 +1,5 @@
 // Load User model
+const authsecret = 'blackcat'
 const passport = require('passport')
 const passportJwt = require('passport-jwt')
 const { Strategy, ExtractJwt } = passportJwt
@@ -7,7 +8,7 @@ const { Strategy, ExtractJwt } = passportJwt
 //validar todas as requisicões 
 module.exports = app => {
     const params = {
-        secretOrKey: 'senhaqualquer',
+        secretOrKey: authsecret,
         jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken()
     }
     //busca o id baseado no token...    

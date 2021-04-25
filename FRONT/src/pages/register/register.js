@@ -62,21 +62,20 @@ function handleSubmit(e) {
 return(
 <div> 
     <div className="registerbody">
-        <form onSubmit={handleSubmit}>
+        <form className='registerform' onSubmit={handleSubmit}>
+            <span>Register </span>
             <fieldset className='mfieldset'>
-                <legend>Register: </legend>
-                <label>nome:</label>
+                <label>Nome da Empresa:</label>
                 <input type="text" id='name' placeholder='Full Name' name='name' required={true} value={user.name} onChange={handleChange}></input><br></br>
-                <label>login:</label>
+                <label>Login:</label>
                 <input type="text"id='login' placeholder='User' name='login' required={true} value={user.login} onChange={handleChange}></input><br></br>
-                <label>senha:</label>
+                <label>Senha:</label>
                 <input type="password" id='password' placeholder='Password' name='password' required={true} value={user.password} onChange={handleChange}></input><br></br>
                 <label>Email:</label>
                 <input type="email" id='email' placeholder='Email' name='email' required={true} value={user.email} onChange={handleChange}></input><br></br>
-                <label>cidade:</label>
+                <label>Cidade:</label>
                 <input type="text" id='city' placeholder='City' name='city' required={true} value={user.city} onChange={handleChange}></input><br></br>
-                <hr></hr>
-                <button type="submit">Registrar</button>   
+                <button type="submit" className='registerbutton'>Registrar</button>   
             </fieldset>
         </form>
     </div>
